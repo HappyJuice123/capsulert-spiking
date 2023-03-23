@@ -1,44 +1,30 @@
 import React, { useState } from "react";
 import {
   StyleSheet,
-  Text,
   View,
-  FlatList,
   TextInput,
   TouchableOpacity,
+  Text,
 } from "react-native";
 
-export default function App() {
-  const [allergies, setAllergies] = useState([]);
-  const [newAllergy, setNewAllergy] = useState("");
+export const AddAllergy = ({ addAllergy }) => {
+  const [newAllergy, setNewAllergy] = useState("Enter your allergies");
 
   const onChange = (textValue) => setNewAllergy(textValue);
 
   return (
-    <View style={styles.container}>
-      <Text>Hello team Tech Capsule!</Text>
+    <View>
       <TextInput
-        placeholder="Enter your allergies"
+        placeholder="Allergies"
         style={styles.input}
-        onPress={() => setNewAllergy("")}
         onChangeText={onChange}
       ></TextInput>
-      <TouchableOpacity
-        onPress={() => {
-          setAllergies((prevAllergies) => {
-            return [...prevAllergies, newAllergy];
-          });
-        }}
-      >
+      <TouchableOpacity onPress={() => addAllergy(newAllergy)}>
         <Text>Add Item</Text>
       </TouchableOpacity>
-      <FlatList
-        data={allergies}
-        renderItem={({ item }) => <Text>{item}</Text>}
-      />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
