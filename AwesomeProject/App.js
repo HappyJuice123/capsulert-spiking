@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello team Tech Capsule!</Text>
+      <Text>Spiking for NHS API Data Visualition</Text>
       <StatusBar style="auto" />
     </View>
   );
