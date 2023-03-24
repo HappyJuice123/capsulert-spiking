@@ -11,8 +11,8 @@ export const AddMedication = ({ setMedications }) => {
   const [newMedication, setNewMedication] = useState("");
 
   const handleInput = (newMedication) => {
-    setMedications((prevAllergies) => {
-      return [...prevAllergies, newMedication];
+    setMedications((prevMedications) => {
+      return [...prevMedications, newMedication];
     });
     setNewMedication("");
   };
