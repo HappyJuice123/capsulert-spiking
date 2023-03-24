@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { ListAllergies } from "./ListAllergies";
+import { ListAllergies } from "./components/ListAllergies";
+import { ListMedications } from "./components/ListMedications";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello team Tech Capsule!</Text>
       <ListAllergies />
+      <ListMedications />
     </View>
   );
 }
@@ -19,5 +21,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     backgroundColor: "#fff",
   },
-  title: { textAlign: "center", marginBottom: 20 },
+  title: {
+    fontSize: 20,
+    textAlign: "center",
+    marginBottom: 20,
+  },
 });
