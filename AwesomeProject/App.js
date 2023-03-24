@@ -1,5 +1,4 @@
 import DisplayMedication from "./Components/DisplayMedication";
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
@@ -7,7 +6,6 @@ export default function App() {
     <View style={styles.container}>
       <Text>Spiking for NHS API Data Visualition</Text>
       <DisplayMedication />
-      <StatusBar style="auto" />
     </View>
   );
 }
