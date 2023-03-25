@@ -26,11 +26,16 @@ export default function DisplayMedication() {
     <View>
       <Text>{name}</Text>
       <Text>
-        {/* FlatList to display each item description */}
+        {/* Could use FlatList to display each item description */}
         {descriptions.map((item) => {
           return item.description;
         })}
       </Text>
+      {/* Could add nhs links as below:
+      https://www.nhs.uk/medicines/{name}/ 
+      Note: some links from the nhs api response are links to api responses
+      ie  url: "https://api.nhs.uk/medicines/rivaroxaban/about-rivaroxaban/#overview"
+       */}
     </View>
   );
 }
