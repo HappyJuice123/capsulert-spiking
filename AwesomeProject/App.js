@@ -1,25 +1,24 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { initializeApp } from "firebase/app";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginScreen from "./screens/LoginScreen";
+import HomeScreen from "./screens/HomeScreen";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBbi_pa_vzAW7v0EiHkLUJwObA5a9jky0c",
-  authDomain: "capsulert-project.firebaseapp.com",
-  projectId: "capsulert-project",
-  storageBucket: "capsulert-project.appspot.com",
-  messagingSenderId: "892192871729",
-  appId: "1:892192871729:web:eab3cfc4447cbeeb7acc10",
-  measurementId: "G-MFQXF1ZV56",
-};
-
-const app = initializeApp(firebaseConfig);
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello team Tech Capsule!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={LoginScreen}
+        />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
