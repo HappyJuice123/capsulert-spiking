@@ -1,7 +1,6 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import * as Notifications from "expo-notifications";
-import Device from "expo-device";
+import * as Device from "expo-device";
 import storage from "@react-native-async-storage/async-storage";
 import { useEffect, useRef, useState } from "react";
 
@@ -35,6 +34,8 @@ export default function App() {
         }
         const token = (await Notifications.getExpoPushTokenAsync()).data;
         await storage.setItem("expopushtoken", token);
+        console.log(token);
+        return token;
       } else {
         alert("Must use physical device for Push Notifications");
       }
@@ -76,11 +77,7 @@ export default function App() {
         body: "body",
         data: { data: "data goes here" },
       },
-      trigger: {
-        hour: 20,
-        minute: 10,
-        repeats: true,
-      },
+      trigger: null,
     });
   };
 

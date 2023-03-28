@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "892192871729",
+    "firebase_url": "https://capsulert-project-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "capsulert-project",
+    "storage_bucket": "capsulert-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892192871729:android:82539323c24120577acc10",
+        "android_client_info": {
+          "package_name": "com.jason1201.AwesomeProject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892192871729-2099tr12fd477v0qapellk03mgkj0oth.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jason1201.AwesomeProject",
+            "certificate_hash": "4b1581d73086f6e9f2f9cc8958654c60d35a1f00"
+          }
+        },
+        {
+          "client_id": "892192871729-t6lolio4rk390mfcq90f16k9qnn3jj73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jason1201.AwesomeProject",
+            "certificate_hash": "ec7672de3d11830c4ed723ce42d20e926c08da8e"
+          }
+        },
+        {
+          "client_id": "892192871729-ipl5alt0sjuteman4er75ujetmufbr2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtNhBp5M7kVcPks_ItAM0Yn1tF8HSwXmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892192871729-ipl5alt0sjuteman4er75ujetmufbr2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
